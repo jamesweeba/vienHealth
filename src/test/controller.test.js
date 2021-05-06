@@ -14,7 +14,7 @@ describe('User registration', () => {
 		request(app)
 			.post(`${baseAuthPath}/registration`)
 			.send({ first_name: 'aseye', last_name: 'aseye', email: email, password: password })
-			.expect(200, done)
+			.expect(201, done)
 			.then((data) => {
 				console.log(data);
 				assert(data.body);

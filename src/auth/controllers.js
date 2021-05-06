@@ -30,7 +30,7 @@ module.exports = {
 					return;
 				}
 
-				let param = { statusCode: 200, result, res };
+				let param = { statusCode: 201, result, res };
 				api.transaction(dbConnection, param);
 			})
 			.catch((err) => {

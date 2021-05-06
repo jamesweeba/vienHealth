@@ -4,6 +4,10 @@ module.exports = {
 	transaction: (client, param) => {
 		let { statusCode, res, token,result } = param;
 		switch (statusCode) {
+			case 201:
+				res.status(statusCode).json(result);
+				mg.close(client);
+				return;
 			case 200:
 				res.status(statusCode).json(result);
 				mg.close(client);
