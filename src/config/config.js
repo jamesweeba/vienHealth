@@ -1,7 +1,7 @@
 module.exports={
     jwtSecret: process.env.JWT_SECRETE ||"indeedthisisasecret",
     port: process.env.PORT || 1900,
-    databaseHost:process.env.DATABASE_HOST||'localhost',
+    databaseHost:process.env.DATABASE_HOST|| 'mongo'||'localhost',
     databasePort:process.env.DATABASE_PORT || 27017
 
 }
